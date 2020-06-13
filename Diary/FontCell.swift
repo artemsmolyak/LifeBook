@@ -37,20 +37,31 @@ class FontCell: UITableViewCell, UITextViewDelegate {
         fontText.textAlignment = .justified
         fontText.isScrollEnabled = false
         fontText.font = UIFont.systemFont(ofSize: 10)
+        fontText.textContainer.maximumNumberOfLines = 6
         fontText.sizeToFit()
-        fontScale.minimumValue = 0
+        
+        fontScale.addTarget(self, action: #selector(changeFontSize), for: .valueChanged)
+        fontScale.minimumValue = 10
         fontScale.maximumValue = 20
+        
+       
         
         NSLayoutConstraint.activate([
             fontText.topAnchor.constraint(equalTo: self.topAnchor, constant: 2),
             fontText.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             fontText.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
+           
 
-            fontScale.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -30),
+            fontScale.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20),
             fontScale.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             fontScale.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
         
         ])
     }
+    
+    @objc func changeFontSize() {
+        let fontSize = CGFloat(fontScale.value)
+        fontText.font = UIFont(name: fontText.font?.fontName ?? "TimesNewRoman", size: fontSize)
+           }
 
 }
