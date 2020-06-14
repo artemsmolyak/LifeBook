@@ -9,22 +9,92 @@
 import UIKit
 
 class NoteViewController: UIViewController {
-
+    
+    var noteId: UUID?
+    
+    @IBOutlet weak var dateTimeLabel: UILabel!
+    
+    @IBOutlet weak var tagsLabel: UITextField!
+    
+    @IBOutlet weak var mainTextLabel: UITextView!
+    
+    @IBOutlet weak var saveBtn: UIButton!
+    
+    
+    
+    func setId(id: UUID){
+        noteId = id
+    }
+     
+//    let leftBarButtonItem: UIBarButtonItem = {
+//        let barButtonItem = UIBarButtonItem(title: "Left", style: .plain, target: self, action: nil)
+//        return barButtonItem
+//    }()
+    
+    
+    func getNoteFromDataBase(){
+        
+        let noteEntity: NoteEntity? = DataBaseWrapper.getNote(id: noteId!)
+        
+        let date = noteEntity!.date
+        dateTimeLabel.text = Utils.dateToString(date: date)
+        
+        tagsLabel.text = noteEntity?.tags
+        mainTextLabel.text = noteEntity?.text
+        
+    }
+    
+    
+    func setupUi(){
+        mainTextLabel.layer.borderWidth = 1.0;
+        mainTextLabel.layer.borderColor = UIColor.lightGray.cgColor
+        mainTextLabel.layer.cornerRadius = 8;
+        
+        self.navigationItem.title = "Note"
+    }
+    
+    
+    func fillDateToday(){
+        dateTimeLabel.text = Utils.dateToString(date: Date())
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupUi()
 
-        // Do any additional setup after loading the view.
+        if noteId == nil {
+            fillDateToday()
+        }
+        else{
+            getNoteFromDataBase()
+        }
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func saveBtnPress(_ sender: Any) {
+        
+        // TO DO пока не учитвается при сохранении
+        // let date = dateTimeLabel.text
+        let tags = tagsLabel.text
+        let text = mainTextLabel.text
+        
+        
+        var noteForSave: NoteEntity?
+        
+        if noteId == nil {
+            
+            noteForSave = NoteEntity(date: Date(), tags: tags!, text: text!)
+        }
+        else{
+            noteForSave = NoteEntity(id: noteId!, date: Date(), tags: tags!, text: text!)
+        }
+ 
+       DataBaseWrapper.save(noteEntity: noteForSave!)
+        
+       self.navigationController?.popViewController(animated: true)
     }
-    */
+    
 
 }

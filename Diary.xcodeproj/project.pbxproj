@@ -11,8 +11,17 @@
 		84C956BE2493A97E0084AD41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84C956BD2493A97E0084AD41 /* Assets.xcassets */; };
 		84C956C42493A97E0084AD41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C956C22493A97E0084AD41 /* LaunchScreen.storyboard */; };
 		84C956EF2493B8330084AD41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C956EE2493B8330084AD41 /* Main.storyboard */; };
-		84C956F12493B8A40084AD41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C956F02493B8A40084AD41 /* ViewController.swift */; };
+		84C956F12493B8A40084AD41 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C956F02493B8A40084AD41 /* MainViewController.swift */; };
 		84C956F32493BFE50084AD41 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C956F22493BFE50084AD41 /* SceneDelegate.swift */; };
+		84C956F52493C1910084AD41 /* Note.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C956F42493C1910084AD41 /* Note.storyboard */; };
+		84C956F724940DF90084AD41 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C956F624940DF90084AD41 /* NoteViewController.swift */; };
+		84C956FA2494D1170084AD41 /* Diary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84C956F82494D1170084AD41 /* Diary.xcdatamodeld */; };
+		84C956FC2494D5EB0084AD41 /* DataBaseWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C956FB2494D5EB0084AD41 /* DataBaseWrapper.swift */; };
+		84C956FF2494D8710084AD41 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C956FE2494D8710084AD41 /* CoreData.framework */; };
+		84C9572424951C7D0084AD41 /* NoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C9572324951C7D0084AD41 /* NoteEntity.swift */; };
+		84C95729249622360084AD41 /* MainTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C95727249622360084AD41 /* MainTableCell.swift */; };
+		84C9572A249622360084AD41 /* MainTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C95728249622360084AD41 /* MainTableCell.xib */; };
+		84C9572C24962C9F0084AD41 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C9572B24962C9F0084AD41 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,8 +31,17 @@
 		84C956C32493A97E0084AD41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84C956C52493A97E0084AD41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84C956EE2493B8330084AD41 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		84C956F02493B8A40084AD41 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		84C956F02493B8A40084AD41 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		84C956F22493BFE50084AD41 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		84C956F42493C1910084AD41 /* Note.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Note.storyboard; sourceTree = "<group>"; };
+		84C956F624940DF90084AD41 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		84C956F92494D1170084AD41 /* Diary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Diary.xcdatamodel; sourceTree = "<group>"; };
+		84C956FB2494D5EB0084AD41 /* DataBaseWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseWrapper.swift; sourceTree = "<group>"; };
+		84C956FE2494D8710084AD41 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		84C9572324951C7D0084AD41 /* NoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEntity.swift; sourceTree = "<group>"; };
+		84C95727249622360084AD41 /* MainTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableCell.swift; sourceTree = "<group>"; };
+		84C95728249622360084AD41 /* MainTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableCell.xib; sourceTree = "<group>"; };
+		84C9572B24962C9F0084AD41 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84C956FF2494D8710084AD41 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +61,7 @@
 			children = (
 				84C956B62493A97A0084AD41 /* Diary */,
 				84C956B52493A97A0084AD41 /* Products */,
+				84C956FD2494D8710084AD41 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +76,39 @@
 		84C956B62493A97A0084AD41 /* Diary */ = {
 			isa = PBXGroup;
 			children = (
-				84C956F02493B8A40084AD41 /* ViewController.swift */,
+				84C9572D249630490084AD41 /* DataBase */,
+				84C956F02493B8A40084AD41 /* MainViewController.swift */,
 				84C956B72493A97A0084AD41 /* AppDelegate.swift */,
 				84C956F22493BFE50084AD41 /* SceneDelegate.swift */,
 				84C956BD2493A97E0084AD41 /* Assets.xcassets */,
 				84C956C22493A97E0084AD41 /* LaunchScreen.storyboard */,
 				84C956C52493A97E0084AD41 /* Info.plist */,
 				84C956EE2493B8330084AD41 /* Main.storyboard */,
+				84C956F42493C1910084AD41 /* Note.storyboard */,
+				84C956F624940DF90084AD41 /* NoteViewController.swift */,
+				84C95727249622360084AD41 /* MainTableCell.swift */,
+				84C95728249622360084AD41 /* MainTableCell.xib */,
+				84C9572B24962C9F0084AD41 /* Utils.swift */,
 			);
 			path = Diary;
+			sourceTree = "<group>";
+		};
+		84C956FD2494D8710084AD41 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84C956FE2494D8710084AD41 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84C9572D249630490084AD41 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				84C956FB2494D5EB0084AD41 /* DataBaseWrapper.swift */,
+				84C956F82494D1170084AD41 /* Diary.xcdatamodeld */,
+				84C9572324951C7D0084AD41 /* NoteEntity.swift */,
+			);
+			path = DataBase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +169,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84C9572A249622360084AD41 /* MainTableCell.xib in Resources */,
+				84C956F52493C1910084AD41 /* Note.storyboard in Resources */,
 				84C956C42493A97E0084AD41 /* LaunchScreen.storyboard in Resources */,
 				84C956BE2493A97E0084AD41 /* Assets.xcassets in Resources */,
 				84C956EF2493B8330084AD41 /* Main.storyboard in Resources */,
@@ -138,8 +184,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84C956F12493B8A40084AD41 /* ViewController.swift in Sources */,
+				84C956F724940DF90084AD41 /* NoteViewController.swift in Sources */,
+				84C956FC2494D5EB0084AD41 /* DataBaseWrapper.swift in Sources */,
+				84C9572424951C7D0084AD41 /* NoteEntity.swift in Sources */,
+				84C956FA2494D1170084AD41 /* Diary.xcdatamodeld in Sources */,
+				84C956F12493B8A40084AD41 /* MainViewController.swift in Sources */,
+				84C9572C24962C9F0084AD41 /* Utils.swift in Sources */,
 				84C956B82493A97A0084AD41 /* AppDelegate.swift in Sources */,
+				84C95729249622360084AD41 /* MainTableCell.swift in Sources */,
 				84C956F32493BFE50084AD41 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +388,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		84C956F82494D1170084AD41 /* Diary.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				84C956F92494D1170084AD41 /* Diary.xcdatamodel */,
+			);
+			currentVersion = 84C956F92494D1170084AD41 /* Diary.xcdatamodel */;
+			path = Diary.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 84C956AC2493A97A0084AD41 /* Project object */;
 }
