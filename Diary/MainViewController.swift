@@ -19,25 +19,7 @@ class MainViewController: UITableViewController {
     let cellID = "cell"
     
     var notes: [NoteEntity]?
-    
-    func fillNotesArrayFromDataBase(){
-         
-        notes = DataBaseWrapper.getAll()
-    }
-    
-    
-    
-    func setupSettingsBtn(){
-        
-        navigationController?.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Button", style: .plain, target: self, action: #selector(buttonTappedAction))
-    }
-    
-    
-    
-    @objc func buttonTappedAction(){
-        print("press")
-    }
-    
+     
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,10 +33,7 @@ class MainViewController: UITableViewController {
         setupSettingsBtn()
     }
     
-    
-    
-    
-    
+  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let destination = segue.destination as? NoteViewController else  { return }
         destination.delegate = self
@@ -64,10 +43,36 @@ class MainViewController: UITableViewController {
 
 
 
+// MARK:: SETTINGS CONTROLLER
 
-// MARK: DELEGATE
+extension MainViewController {
+    
+    func setupSettingsBtn(){
+        
+       let icon = UIImage(named: "settings.png")?.withRenderingMode(.alwaysTemplate)
+        
+       navigationItem.leftBarButtonItem = UIBarButtonItem(image: icon, style: .plain, target: self, action: #selector(buttonTappedAction))
+    }
+    
+    
+    @objc func buttonTappedAction(){
+        self.navigationController?.pushViewController(SettingsVC(), animated:true)
+    }
+}
+
+ 
+
+
+// MARK: DATABASE
 
 extension MainViewController: MainControllerDelegate{
+    
+    func fillNotesArrayFromDataBase(){
+         
+        notes = DataBaseWrapper.getAll()
+    }
+    
+    
     func updateData() {
         
         fillNotesArrayFromDataBase()
@@ -75,6 +80,7 @@ extension MainViewController: MainControllerDelegate{
     }
     
 }
+
 
 // MARK: TABLE
 

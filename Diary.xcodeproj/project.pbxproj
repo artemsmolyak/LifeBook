@@ -24,6 +24,8 @@
 		84C9572A249622360084AD41 /* MainTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C95728249622360084AD41 /* MainTableCell.xib */; };
 		84C9572C24962C9F0084AD41 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C9572B24962C9F0084AD41 /* Utils.swift */; };
 		84C957312496959E0084AD41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C956EE2493B8330084AD41 /* Main.storyboard */; };
+		84C9573424969EBC0084AD41 /* icons-settings-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C9573324969EBC0084AD41 /* icons-settings-50.png */; };
+		84C957362496A0520084AD41 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C957352496A0520084AD41 /* settings.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		84C95727249622360084AD41 /* MainTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableCell.swift; sourceTree = "<group>"; };
 		84C95728249622360084AD41 /* MainTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableCell.xib; sourceTree = "<group>"; };
 		84C9572B24962C9F0084AD41 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		84C9573324969EBC0084AD41 /* icons-settings-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons-settings-50.png"; sourceTree = "<group>"; };
+		84C957352496A0520084AD41 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,7 @@
 		84C956B62493A97A0084AD41 /* Diary */ = {
 			isa = PBXGroup;
 			children = (
+				84C9573224969E810084AD41 /* img */,
 				84C9572D249630490084AD41 /* DataBase */,
 				84C956F02493B8A40084AD41 /* MainViewController.swift */,
 				84C956B72493A97A0084AD41 /* AppDelegate.swift */,
@@ -115,6 +120,15 @@
 				84C9572324951C7D0084AD41 /* NoteEntity.swift */,
 			);
 			path = DataBase;
+			sourceTree = "<group>";
+		};
+		84C9573224969E810084AD41 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				84C957352496A0520084AD41 /* settings.png */,
+				84C9573324969EBC0084AD41 /* icons-settings-50.png */,
+			);
+			path = img;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +189,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84C9573424969EBC0084AD41 /* icons-settings-50.png in Resources */,
+				84C957362496A0520084AD41 /* settings.png in Resources */,
 				84C9572A249622360084AD41 /* MainTableCell.xib in Resources */,
 				84C957312496959E0084AD41 /* Main.storyboard in Resources */,
 				84C956F52493C1910084AD41 /* Note.storyboard in Resources */,
