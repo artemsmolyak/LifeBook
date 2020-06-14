@@ -11,17 +11,17 @@ import UIKit
 @available(iOS 13.0, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
-    var window: UIWindow?
-
-
+  var window: UIWindow?
+ 
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
-        guard let sceneWindow = (scene as? UIWindowScene) else { return }
-        let window = UIWindow(windowScene: sceneWindow)
-        window.rootViewController = UINavigationController(rootViewController: SettingsVC())
-        self.window = window
-        window.makeKeyAndVisible()
-        window.backgroundColor = .systemPink
+        //guard let sceneWindow = (scene as? UIWindowScene) else { return }
+        //let window = UIWindow(windowScene: sceneWindow)
+        //window.rootViewController = UINavigationController(rootViewController: SettingsVC())
+        //self.window = window
+        //window.makeKeyAndVisible()
+        //window.backgroundColor = .systemPink
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

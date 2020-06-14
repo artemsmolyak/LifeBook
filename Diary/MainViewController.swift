@@ -26,6 +26,18 @@ class MainViewController: UITableViewController {
     }
     
     
+    
+    func setupSettingsBtn(){
+        
+        navigationController?.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Button", style: .plain, target: self, action: #selector(buttonTappedAction))
+    }
+    
+    
+    
+    @objc func buttonTappedAction(){
+        print("press")
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +47,8 @@ class MainViewController: UITableViewController {
         fillNotesArrayFromDataBase()
  
         tableView.register( UINib(nibName: "MainTableCell", bundle: nil), forCellReuseIdentifier: cellID )
+        
+        setupSettingsBtn()
     }
     
     
