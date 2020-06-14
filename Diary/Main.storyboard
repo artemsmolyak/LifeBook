@@ -34,7 +34,7 @@
                         <barButtonItem key="leftBarButtonItem" image="square.and.arrow.up" catalog="system" id="XDX-Pp-zyr"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="XK7-bX-Zie">
                             <connections>
-                                <segue destination="5E7-IT-Ox5" kind="show" id="use-Lf-4pG"/>
+                                <segue destination="5E7-IT-Ox5" kind="show" identifier="" id="use-Lf-4pG"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

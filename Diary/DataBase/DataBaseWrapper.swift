@@ -14,8 +14,6 @@ import UIKit
 // Класс для доступа к базе данных
 class DataBaseWrapper {
     
-    
-    
     static func getNote(id: UUID)->NoteEntity?{
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return nil }

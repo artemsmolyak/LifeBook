@@ -20,7 +20,7 @@ class NoteViewController: UIViewController {
     
     @IBOutlet weak var saveBtn: UIButton!
     
-    
+    var delegate: MainControllerDelegate?
     
     func setId(id: UUID){
         noteId = id
@@ -92,6 +92,7 @@ class NoteViewController: UIViewController {
         }
  
        DataBaseWrapper.save(noteEntity: noteForSave!)
+       delegate?.updateData()
         
        self.navigationController?.popViewController(animated: true)
     }

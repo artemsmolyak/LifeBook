@@ -8,6 +8,12 @@
 
 import UIKit
 
+
+protocol MainControllerDelegate: class {
+    func updateData()
+}
+
+
 class MainViewController: UITableViewController {
     
     let cellID = "cell"
@@ -31,12 +37,40 @@ class MainViewController: UITableViewController {
         tableView.register( UINib(nibName: "MainTableCell", bundle: nil), forCellReuseIdentifier: cellID )
     }
     
+    
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? NoteViewController else  { return }
+        destination.delegate = self
+    }
+ 
+}
 
+
+
+
+// MARK: DELEGATE
+
+extension MainViewController: MainControllerDelegate{
+    func updateData() {
+        
+        fillNotesArrayFromDataBase()
+        self.tableView.reloadData()
+    }
+    
+}
+
+// MARK: TABLE
+
+extension MainViewController{
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int)->Int{
         return notes!.count;
     }
     
-  
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         
@@ -45,7 +79,7 @@ class MainViewController: UITableViewController {
         let noteItem = notes?[indexPath.item]
         
         cell?.setup(id: noteItem!.id, date: noteItem!.date, text: noteItem!.text)
-      
+        
         return cell!
     }
     
@@ -61,8 +95,4 @@ class MainViewController: UITableViewController {
         noteViewController.setId( id: (cell?.noteId)! )
         self.navigationController?.pushViewController(noteViewController, animated:true)
     }
-
 }
-
-
- 
