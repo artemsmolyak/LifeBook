@@ -12,7 +12,34 @@ import UIKit
 
 
 // Класс для доступа к базе данных
-class DataBaseWrapper {
+class DataBaseWrapper { 
+    
+    static func removeItem(id: UUID){
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let diaryEntity = NSFetchRequest<NSFetchRequestResult>(entityName: "Diary")
+        
+        do{
+            
+            let result = try managedContext.fetch( diaryEntity )
+            for data in result as! [NSManagedObject]{
+                let idCheck = data.value(forKey: KeysForNoteEntity.id.rawValue) as! UUID
+                
+                if idCheck == id{
+                    managedContext.delete(data)
+                    try managedContext.save()
+                }
+            }
+        }
+        catch{
+            print("error")
+        }
+    }
+    
+    
     
     static func getNote(id: UUID)->NoteEntity?{
         

@@ -115,4 +115,16 @@ extension MainViewController{
         noteViewController.setId( id: (cell?.noteId)! )
         self.navigationController?.pushViewController(noteViewController, animated:true)
     }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if (editingStyle == UITableViewCell.EditingStyle.delete) {
+            
+            let cell = self.tableView.cellForRow(at: indexPath) as? MainTableCell
+            
+            notes?.remove(at: indexPath.item)
+            DataBaseWrapper.removeItem(id: (cell?.noteId!)! )
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
 }
