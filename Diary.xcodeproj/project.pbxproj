@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		802F6E482493DA9F0099FF55 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802F6E472493DA9F0099FF55 /* SettingsVC.swift */; };
 		802F6E4E2493F29C0099FF55 /* FontCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802F6E4D2493F29C0099FF55 /* FontCell.swift */; };
+		80E0D3B124951226006D63E3 /* PasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E0D3B024951226006D63E3 /* PasswordVC.swift */; };
+		80E0D3B324951247006D63E3 /* PasswordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E0D3B224951247006D63E3 /* PasswordCell.swift */; };
+		80E0D3B524951403006D63E3 /* SecurityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E0D3B424951403006D63E3 /* SecurityCell.swift */; };
+		80E0D3BB24955225006D63E3 /* PasswordHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E0D3BA24955225006D63E3 /* PasswordHeader.swift */; };
+		80E0D3E32498CF9A006D63E3 /* BackspaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E0D3E22498CF9A006D63E3 /* BackspaceCell.swift */; };
 		84C956B82493A97A0084AD41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C956B72493A97A0084AD41 /* AppDelegate.swift */; };
 		84C956BE2493A97E0084AD41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84C956BD2493A97E0084AD41 /* Assets.xcassets */; };
 		84C956C42493A97E0084AD41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C956C22493A97E0084AD41 /* LaunchScreen.storyboard */; };
@@ -19,6 +24,11 @@
 /* Begin PBXFileReference section */
 		802F6E472493DA9F0099FF55 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		802F6E4D2493F29C0099FF55 /* FontCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontCell.swift; sourceTree = "<group>"; };
+		80E0D3B024951226006D63E3 /* PasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordVC.swift; sourceTree = "<group>"; };
+		80E0D3B224951247006D63E3 /* PasswordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCell.swift; sourceTree = "<group>"; };
+		80E0D3B424951403006D63E3 /* SecurityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityCell.swift; sourceTree = "<group>"; };
+		80E0D3BA24955225006D63E3 /* PasswordHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordHeader.swift; sourceTree = "<group>"; };
+		80E0D3E22498CF9A006D63E3 /* BackspaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackspaceCell.swift; sourceTree = "<group>"; };
 		84C956B42493A97A0084AD41 /* Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C956B72493A97A0084AD41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84C956BD2493A97E0084AD41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,6 +76,11 @@
 				84C956C52493A97E0084AD41 /* Info.plist */,
 				802F6E472493DA9F0099FF55 /* SettingsVC.swift */,
 				802F6E4D2493F29C0099FF55 /* FontCell.swift */,
+				80E0D3B424951403006D63E3 /* SecurityCell.swift */,
+				80E0D3B024951226006D63E3 /* PasswordVC.swift */,
+				80E0D3B224951247006D63E3 /* PasswordCell.swift */,
+				80E0D3BA24955225006D63E3 /* PasswordHeader.swift */,
+				80E0D3E22498CF9A006D63E3 /* BackspaceCell.swift */,
 			);
 			path = Diary;
 			sourceTree = "<group>";
@@ -141,8 +156,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				802F6E4E2493F29C0099FF55 /* FontCell.swift in Sources */,
+				80E0D3B324951247006D63E3 /* PasswordCell.swift in Sources */,
+				80E0D3B124951226006D63E3 /* PasswordVC.swift in Sources */,
 				84C956F12493B8A40084AD41 /* ViewController.swift in Sources */,
 				802F6E482493DA9F0099FF55 /* SettingsVC.swift in Sources */,
+				80E0D3BB24955225006D63E3 /* PasswordHeader.swift in Sources */,
+				80E0D3B524951403006D63E3 /* SecurityCell.swift in Sources */,
+				80E0D3E32498CF9A006D63E3 /* BackspaceCell.swift in Sources */,
 				84C956B82493A97A0084AD41 /* AppDelegate.swift in Sources */,
 				84C956F32493BFE50084AD41 /* SceneDelegate.swift in Sources */,
 			);
@@ -282,7 +302,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = C7G3ZP438S;
+				DEVELOPMENT_TEAM = 46QT5WN8ZX;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Diary/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -290,7 +310,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = friends.Diary;
+				PRODUCT_BUNDLE_IDENTIFIER = didigain.Diary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -303,7 +323,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = C7G3ZP438S;
+				DEVELOPMENT_TEAM = 46QT5WN8ZX;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Diary/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -311,7 +331,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = friends.Diary;
+				PRODUCT_BUNDLE_IDENTIFIER = didigain.Diary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

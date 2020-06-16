@@ -10,14 +10,11 @@ import UIKit
 
 class SettingsVC: UITableViewController {
     
-    let fontSection = UITableViewCell()
+    let fontCell = FontCell()
     let securitySection = UITableViewCell()
     let themeSection = UITableViewCell()
     
-    let fontCell = FontCell()
-
     let securitySwitch = UISwitch(frame: .zero)
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +57,7 @@ class SettingsVC: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch(indexPath.section) {
         case 0:
+            fontCell.backgroundColor = .white
             return fontCell
         case 1:
             let cell = securitySection
@@ -77,9 +75,15 @@ class SettingsVC: UITableViewController {
              fatalError("Unknown section")
         }
     }
-    
-    @objc func switchChanged() {
-        
-    }
+}
 
+extension SettingsVC {
+    @objc func switchChanged() {
+        if securitySwitch.isOn {
+            let vc = PasswordVC()
+//            vc.modalPresentationStyle = .fullScreen
+//            present(vc, animated: true, completion: nil)
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
 }
